@@ -2,10 +2,10 @@
 
 clear
 echo "Preparing to install Etcher into your machine!"
-sleep 2
+sudo apt update -qq; apt install -y -qq wget
 
 clear
-echo "Preparing to install Etcher into your machine! [done]"
+echo "Preparing to install Etcher into your machine!     [done]"
 echo "Downloading the package"
 #echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list
 #sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
@@ -15,10 +15,10 @@ clear
 echo "Preparing to install Etcher into your machine!     [done]"
 echo "Downloading the package                            [done]"
 echo "Installing the package"
-sudo apt update -qq
 #sudo apt install -y balena-etcher-electron
 #sudo dpkg -i balena-etcher_1.18.8_amd64.deb
-sudo apt install ./balena-etcher_1.18.8_amd64.deb
+apt install ./balena-etcher_1.18.8_amd64.deb
+rm balena-etcher_1.18.8_amd64.deb
 
 clear
 echo "Preparing to install Etcher into your machine!     [done]"
